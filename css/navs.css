@@ -1,0 +1,19 @@
+/* Navigation
+-------------------- */
+#menu { height: 51px; padding: 10px 30px 10px 15px; background: #fafafa; margin: 0 0 30px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+
+/* Menu */
+#menu .menu { padding-bottom: 25px; }
+#menu .menu li { float: left; color: #777; padding: 3px 7px 4px 7px; background: #eee; margin-right: 5px; }
+#menu .menu li a.new { color: #390; }
+#menu .menu li a { text-decoration: none; color: #777; }
+#menu .menu li.active { position: relative; background: #333; }
+#menu .menu li.active a { color: #fff; }
+
+/* Sub-menu */
+#menu .sub-menu { position: absolute; top: 30px; left: 0; width: 400px; font-size: 11px; }
+#menu .sub-menu li { margin-right: 5px; line-height: 12px; background: #eee; padding: 3px 5px 5px 5px !important; }
+#menu .sub-menu li a { color: #777 !important; }
+#menu .sub-menu li a:hover { color: #333; }
+#menu .sub-menu li.active { background: #555; color: #fff; }
+#menu .sub-menu li.active a { color: #fff !important; }

@@ -1,0 +1,186 @@
+/* -------------------------------------------------------------------
+	ОБЩИЕ СТИЛИ
+------------------------------------------------------------------- */
+
+/* Голосование 
+---------------------------------------------------- */
+.vote { overflow: hidden; zoom: 1; }
+
+.vote .vote-count { float: left; padding: 0 7px; font-weight: bold; color: #aaa; }
+.vote .vote-count a { text-decoration: none; color: #999; outline: none; }
+
+.vote.vote-count-positive .vote-count { color: #390; }
+.vote.vote-count-negative .vote-count { color: #f00; }
+
+.vote .vote-up,
+.vote .vote-down			{ width: 10px; height: 10px; float: left; display: block; background: url(../images/voting.png) no-repeat; position: relative; top: 4px; outline: none; }
+.vote .vote-up 			{ background-position: 0 0; }
+.vote .vote-down 			{ background-position: -20px 0; }
+.vote .vote-up:hover 	{ background-position: -10px 0; }
+.vote .vote-down:hover 	{ background-position: -30px 0; }
+
+.vote.voted.voted-up 	.vote-up			{ background-position: -10px 0; }
+.vote.voted.voted-down .vote-down 			{ background-position: -30px 0; }
+.vote.voted.voted-up	.vote-down:hover 	{ background-position: -20px 0; }
+.vote.voted.voted-down .vote-up:hover 	{ background-position: 0 0; }
+
+/* Избранное 
+---------------------------------------------------- */
+.favourite 			{ background: url(../images/favorite.png) no-repeat; display: block; height: 16px; width: 16px; position: relative; top: 1px; float: left;}
+.favourite:hover 	{ background-position: 0 -16px !important; }
+.favourite.active 	{ background-position: 0 -16px; }
+.favourite-count    { color: #333; font-weight: bold; float: left; margin-left: 2px; }
+
+/* Switcher */
+.switcher { overflow: hidden; zoom: 1; margin-bottom: 10px; }
+.switcher li { float: left; margin-right: 3px; }
+.switcher li a { float: left; padding: 1px 10px 2px; text-decoration: none; color: #777; background: #eee; }
+.switcher li.active a {  border: 0; color: #eee; background: #555; }
+
+.switcher-block { overflow: hidden; zoom: 1; margin-bottom: 10px; }
+.switcher-block li { float: left; padding: 1px 10px 2px; margin-right: 3px; color: #777; background: #eee; cursor: pointer; }
+.switcher-block li:hover { background: #ddd; }
+.switcher-block li.active { color: #eee; background: #555; }
+
+
+/* Пагинация 
+---------------------------------------------------- */
+.pagination ul li { display: inline; margin-right: 5px; font: italic 16px Georgia, serif; }
+.pagination ul li.active { color: #aaa; }
+
+/* Actions 
+---------------------------------------------------- */
+.actions { overflow: hidden; zoom: 1; margin-bottom: 10px; }
+.actions li a { overflow: hidden; zoom: 1; margin-bottom: 10px; color: #333; text-decoration: none; }
+.actions li { float: left; margin-right: 10px; }
+.actions li .edit { padding-left: 15px; background: url(../images/edit.png) no-repeat 0 1px; }
+.actions li .delete { padding-left: 14px; background: url(../images/delete.png) no-repeat 0 2px; }
+.actions li .rss { padding-left: 15px; background: url(../images/rss.png) no-repeat 0 1px; }
+.actions li a:hover { text-decoration: underline; }
+
+/* Toolbar 
+---------------------------------------------------- */
+.toolbar 					{ float: right; position: fixed; top: 220px; right: 10px; z-index: 100; }
+.toolbar section 			{ width: 34px; line-height: 14px; background: #fff; -webkit-box-shadow: 0 0 5px rgba(0,0,0,.05); box-shadow: 0 0 5px rgba(0,0,0,.05); margin-bottom: 10px; }
+.toolbar section a			{ display: block; padding: 10px; }
+.toolbar section a:hover	{ background: #fafafa; }
+.toolbar section i			{ display: block; }
+
+/* Admin button */
+.toolbar .toolbar-admin a { display: block; }
+
+/* Update comments button */
+.toolbar .toolbar-update {  }
+.toolbar .toolbar-update .update-comments 			{ padding: 9px; }
+.toolbar .toolbar-update .update-comments i 		{ display: block; width: 16px; height: 16px; background: url(../images/update.gif) no-repeat; }
+.toolbar .toolbar-update .update-comments.active i 	{ background-position: -16px 0; }
+.toolbar .toolbar-update .new-comments 				{ border-top: 1px solid #eee; padding: 10px 0; color: #333; text-align: center; font-size: 11px; }
+
+/* Topic navigation */
+.toolbar .toolbar-topic a.toolbar-topic-prev { border-bottom: 1px solid #eee; }
+
+/* Scroll up */
+.toolbar .toolbar-scrollup { display: none; }
+
+
+
+/* Список пользователей 
+---------------------------------------------------- */
+.user-list-avatar 			{ overflow: hidden; zoom: 1; }
+.user-list-avatar li 		{ width: 64px; overflow: hidden; float: left; margin-right: 20px; margin-bottom: 15px; text-align: center; font-size: 11px; }
+.user-list-avatar li img	{ margin-bottom: 2px; display: block; }
+
+
+
+/* Поиск 
+---------------------------------------------------- */
+.search 						{ width: 200px; margin-bottom: 20px; position: relative; }
+.search .input-text 			{ width: 200px; padding-right: 25px; }
+.search .input-submit 			{ border: none; width: 16px; height: 16px; position: absolute; top: 6px; right: 5px; opacity: .7; filter: alpha(opacity=70); }
+.search .input-submit:hover 	{ opacity: 1; filter: alpha(opacity=100); }
+
+.search.search-item 			{ margin-bottom: 15px; width: 100%; }
+.search.search-item .input-text { width: 100%; padding-right: 5px; }
+
+.search-abc 					{ overflow: hidden; zoom: 1; padding: 10px 15px; background: #fafafa; margin-bottom: 15px; }
+.search-abc li 					{ float: left; margin-right: 10px; }
+.search-abc li.active a 		{ color: #333; border: none; }
+
+.search-tags 					{ margin-bottom: 15px; }
+
+
+
+/* Облако тегов 
+---------------------------------------------------- */
+.tag-cloud 	{ width: 100%; }
+.tag-cloud li { display: inline; margin-right: 5px; line-height: 22px; }
+.tag-cloud li a { text-decoration: none; white-space: nowrap; }
+.tag-cloud li a.w1 { font-size: 12px; }
+.tag-cloud li a.w2 { font-size: 12px; }
+.tag-cloud li a.w3 { font-size: 14px; }
+.tag-cloud li a.w4 { font-size: 14px; }
+.tag-cloud li a.w5 { font-size: 18px; }
+.tag-cloud li a.w6 { font-size: 18px; }
+.tag-cloud li a.w7 { font-size: 20px; }
+.tag-cloud li a.w8 { font-size: 20px; }
+.tag-cloud li a.w9 { font-size: 22px; }
+.tag-cloud li a.w10 { font-size: 22px; }
+
+
+/* Item List 
+---------------------------------------------------- */
+.item-list 					{ border-top: 1px solid #eee; }
+.item-list li 				{ min-height: 51px; padding: 7px 0 10px 58px; border-bottom: 1px solid #eee; position: relative; zoom: 1; }
+.item-list li p 			{ padding-top: 2px; font-size: 11px; }
+.item-list li a 			{ text-decoration: none; }
+.item-list li .avatar 		{ position: absolute; top: 10px; left: 0; margin-right: 10px; }
+.item-list li .author 		{ font-weight: bold; color: #333; }
+.item-list li .blog-name 	{ font-weight: bold; }
+
+
+
+/* Хелперы
+---------------------------------------------------- */
+.mt-10 { margin-bottom: 10px !important; }
+.mt-20 { margin-bottom: 20px !important; }
+
+.mb-10 { margin-bottom: 10px !important; }
+.mb-15 { margin-bottom: 15px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+
+.ta-c { text-align: center !important; }
+.ta-r { text-align: right !important; }
+.va-m { vertical-align: middle; }
+.fl-r { float: right !important; }
+.fl-l { float: left !important; }
+
+.clearfix:before,
+.clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix 		{ zoom: 1; }
+
+.word-wrap {
+	white-space: -moz-pre-wrap !important;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap; 
+	white-space: pre-wrap;
+	word-wrap: break-word; 
+	white-space: normal;
+}
+
+
+
+/* Разное
+---------------------------------------------------- */
+.system-message-error 	{ background: #f0c8c8; color: #b22626; padding: 10px 15px; margin-bottom: 15px; }
+.system-message-notice 	{ background: #dafad8; color: #4bb23b; padding: 10px 15px; margin-bottom: 15px; }
+
+.notice-empty 			{ color: #aaa; }
+
+.loader { background: #fafafa url(../images/loader.gif) 50% 50% no-repeat; }
+
+.user, .ls-user { padding-left: 12px; background: url(../images/user.png) no-repeat 0 2px; color: #555; }
+.user.inactive { color: #888; }
+
+.center { width: 300px; margin: 0 auto; }

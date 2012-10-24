@@ -1,0 +1,68 @@
+/* --------------------------------------------
+	КОММЕНТАРИИ
+-------------------------------------------- */
+
+/* Блок с комментариями */
+.comments-header { margin-bottom: 30px; }
+.comments-header h3 { font-size: 24px; margin-bottom: 5px; }
+
+.comments { margin-bottom: 30px; }
+
+.comment-wrapper { position: relative; }
+.comment-wrapper .comment-wrapper { padding-left: 25px; }
+
+.comment-preview { padding: 5px 10px 6px; margin-bottom: 10px; background: #fafafa; border: 1px solid #eee; border-radius: 3px; }
+.comment-preview { font-size: 13px; line-height: 18px; }
+
+/* Комментарий */
+.comment { min-height: 48px; margin-bottom: 25px; padding-left:50px; position: relative; }
+.comment .deleted { padding: 5px 10px; color: #777; background: #f4f4f4; }
+.comment .comment-avatar { position: absolute; top: 10px; left: 10px; }
+
+
+/* Типы комментариев
+ *
+ * deleted 	- 	удаленный комментарий
+ * self 	- 	ваш комментарий
+ * new 		- 	новый, непрочитанный комментарий
+ * current 	- 	активный комментарий, который выделяется при исползование кнопки обновления в тулбаре
+ *
+ */
+/* Comment Highlights */
+.comment 					.info	{ background: #fff; }
+.comment.comment-deleted 			.info	{ background: #efd5d5; }
+.comment.comment-self 				.info	{ background: #faf8f4; }
+.comment.comment-new 				.info	{ background: #fbfba8; }
+.comment.comment-current 			.info	{ background: #a5e7fa; }
+
+.ls-user-role-not-admin .comment.comment-deleted 	{ padding: 10px 15px; min-height: 0; background: #f7f7f7; color: #888; }
+
+/* Info Block */
+.comment .avatar { position: absolute; top: 0; left: 0; }
+.comment .info { overflow: hidden; zoom: 1; font-size: 11px; }
+.comment .info .username { font: italic 16px/1 Georgia, serif; color: #444; }
+.comment .info .username a { font-weight: bold; font-style: normal; }
+.comment .info .date { font-size: 12px; color: #888; padding: 3px 0 0; }
+
+/* Content */
+.comment .content { font: 16px/1.4 Georgia, serif; color: #444; padding: 10px 0; }
+
+/* Actions */
+.comment .actions { font-size: 11px; font-family: Georgia, serif; }
+.comment .actions a {  }
+
+/* Comment List */
+.comments.comment-list .path { padding-top: 2px; padding-bottom: 3px; font: 12px Georgia, serif; }
+.comments.comment-list .path .blog-name { color: #777; }
+
+
+/* Форма комментирования */
+.reply-header { font-size: 20px; line-height: 1.3em; margin-bottom: 15px; }
+
+.reply { padding-bottom: 10px; }
+.reply textarea { height: 100px; }
+.reply textarea.loader { background: #f7f7f7 url(../images/loader.gif) no-repeat center; }
+
+.reply .mceEditor { display: block; margin-bottom: 10px; }
+
+.comment .reply { padding-left:50px; margin-bottom:20px }
