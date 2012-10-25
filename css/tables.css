@@ -4,5 +4,16 @@
 
 .table { width: 100%; margin-bottom: 15px; }
 .table thead td { background: #fafafa; font-weight:bold }
+.table thead th { background: #fafafa; font-weight:bold }
 .table td { border: 1px solid #eee; padding: 5px; }
+.table th { border: 1px solid #eee; padding: 5px; }
 .table tr.active td { background: #F1FCEF; }
+.table tr.active th { background: #F1FCEF; }
+
+.avatar-blog {
+  float:left
+}
+
+.info-blog {
+  margin-left:60px
+}
