@@ -1,4 +1,4 @@
-<table class="table table-blogs">
+<table class="table">
 	{if $bBlogsUseOrder}
 		<thead>
 			<tr>
@@ -28,8 +28,8 @@
 			</tr>
 		</thead>
 	{/if}
-	
-	
+
+
 	<tbody>
 		{if $aBlogs}
 			{foreach from=$aBlogs item=oBlog}
@@ -38,10 +38,10 @@
 				<tr>
 					<td class="cell-name">
 						<a href="{$oBlog->getUrlFull()}">
-							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" alt="avatar" class="avatar" />
+							<img src="{$oBlog->getAvatarPath(48)}" width="48" height="48" alt="avatar" class="avatar-blog" />
 						</a>
-						
-						<p>
+
+						<div class="info-blog">
 							<a href="#" onclick="return ls.infobox.showInfoBlog(this,{$oBlog->getId()});" class="icon-question-sign"></a>
 
 							{if $oBlog->getType() == 'close'}
@@ -49,7 +49,7 @@
 							{/if}
 
 							<a href="{$oBlog->getUrlFull()}">{$oBlog->getTitle()|escape:'html'}</a>
-						</p>
+						</div>
 					</td>
 
 					{if $oUserCurrent}
