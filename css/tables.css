@@ -3,6 +3,6 @@
 ------------------------------------------------------------------- */
 
 .table { width: 100%; margin-bottom: 15px; }
-.table thead td { background: #fafafa; }
+.table thead td { background: #fafafa; font-weight:bold }
 .table td { border: 1px solid #eee; padding: 5px; }
 .table tr.active td { background: #F1FCEF; }

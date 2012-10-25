@@ -13,6 +13,9 @@ return array(
 	'comment_fold' => 'свернуть ветку',
 	'comment_unfold' => 'развернуть ветку',
 	'people' => 'Авторы',
+	'search' => 'Искать',
+	'search_text' => 'Поиск по сайту',
+	'topic_menu_add_blog' => 'Блог',
 	'main' => 'Главная',
 	'topic_comments' => 'Комментариев',
 	'topic_comments_no' => 'нет',
@@ -29,6 +32,7 @@ return array(
 	'block_stream_comments_all' => 'Все комментарии',
 	'user_menu_publication_blog' => 'Топики автора',
 	'user_menu_publication_comment' => 'Комментарии автора',
+	'tag_search' => 'Поиск по тегу',
 );
 
 ?>

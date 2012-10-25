@@ -4,7 +4,9 @@
 
 /* Блок с комментариями */
 .comments-header { margin-bottom: 30px; }
-.comments-header h3 { font-size: 24px; margin-bottom: 5px; }
+.comments-header h3 { font-size: 24px; font-weight: bold; color: #333; }
+.comments-header .rss { background: url(../images/feed.png) no-repeat 0 4px; float:left; padding-left: 14px; color: #390; margin-right: 10px; }
+.comments-header .subscribe { position:relative; top:2px; left:5px }
 
 .comments { margin-bottom: 30px; }
 

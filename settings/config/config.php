@@ -17,7 +17,7 @@ $config['view']['grid']['fluid_min_width'] = 1000;
 $config['view']['grid']['fluid_max_width'] = 1400;
 
 /* Fixed settings */
-$config['view']['grid']['fixed_width'] = 1000;
+$config['view']['grid']['fixed_width'] = 976;
 
 
 

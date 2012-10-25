@@ -1,11 +1,10 @@
 {if $sEvent=='add'}
-	{include file='header.tpl'}
+	{include file='header.tpl' menu='create'}
 {else}
 	{include file='header.tpl'}
 	{include file='menu.blog_edit.tpl'}
 {/if}
-
-{include file='menu.create.tpl'}
+                                               
 {include file='editor.tpl' sImgToLoad='blog_description' sSettingsTinymce='ls.settings.getTinymceComment()' sSettingsMarkitup='ls.settings.getMarkitupComment()'}
 	
 <script type="text/javascript">

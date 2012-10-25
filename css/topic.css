@@ -39,6 +39,9 @@
 /* Share */
 .topic .topic-share { display: none; padding: 3px; margin-bottom: 10px; border: 5px solid #eee; }
 
+/* Talk */
+.topic.topic-type-talk .favourite { margin-right:10px }
+
 /* Poll */
 .topic .poll { margin-bottom: 15px; background: #fafafa; padding: 15px; }
 

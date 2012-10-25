@@ -106,9 +106,13 @@
 .search-abc li 					{ float: left; margin-right: 10px; }
 .search-abc li.active a 		{ color: #333; border: none; }
 
-.search-tags 					{ margin-bottom: 15px; }
+.tags-search {
+  background:#f9f9f9; padding:20px
+}
 
-
+.tags-search form {
+  margin-bottom:0
+}
 
 /* Облако тегов 
 ---------------------------------------------------- */

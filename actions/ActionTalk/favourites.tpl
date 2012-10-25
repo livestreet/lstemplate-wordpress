@@ -1,5 +1,5 @@
 {assign var="sidebarPosition" value='left'}
-{include file='header.tpl'}               
+{include file='header.tpl'}
 {include file='menu.talk.tpl'}
 
 
@@ -8,10 +8,11 @@
 	<table class="table table-talk">
 		<thead>
 			<tr>
-				<th class="cell-favourite"></th>
-				<th class="cell-recipients">{$aLang.talk_inbox_target}</th>
-				<th class="cell-title">{$aLang.talk_inbox_title}</th>
-				<th class="cell-date ta-r">{$aLang.talk_inbox_date}</th>
+				<td width="20"><input type="checkbox" name="" onclick="ls.tools.checkAll('form_talks_checkbox', this);"></td>
+				<td width="150">{$aLang.talk_inbox_target}</td>
+				<td width="20"></td>
+				<td>{$aLang.talk_inbox_title}</td>
+				<td width="170" align="center">{$aLang.talk_inbox_date}</td>
 			</tr>
 		</thead>
 
@@ -19,9 +20,7 @@
 		{foreach from=$aTalks item=oTalk}
 			{assign var="oTalkUserAuthor" value=$oTalk->getTalkUser()}
 			<tr>
-				<td class="cell-favourite">
-					<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a>
-				</td>
+				<td><input type="checkbox" name="talk_del[{$oTalk->getId()}]" class="form_talks_checkbox" /></td>
 				<td>
 					{foreach from=$oTalk->getTalkUsers() item=oTalkUser name=users}
 						{if $oTalkUser->getUserId()!=$oUserCurrent->getId()}
@@ -29,20 +28,22 @@
 							<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
 						{/if}
 					{/foreach}
-
+				</td>
+				<td align="center">
+					<a href="#" onclick="return ls.favourite.toggle({$oTalk->getId()},this,'talk');" class="favourite {if $oTalk->getIsFavourite()}active{/if}"></a>
 				</td>
 				<td>
-				{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
-					<a href="{router page='talk'}read/{$oTalk->getId()}/"><strong>{$oTalk->getTitle()|escape:'html'}</strong></a>
-				{else}
-					<a href="{router page='talk'}read/{$oTalk->getId()}/">{$oTalk->getTitle()|escape:'html'}</a>
-				{/if}
-				&nbsp;
-				{if $oTalk->getCountComment()}
-					{$oTalk->getCountComment()} {if $oTalkUserAuthor->getCommentCountNew()}+{$oTalkUserAuthor->getCommentCountNew()}{/if}
-				{/if}
+					{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
+						<a href="{router page='talk'}read/{$oTalk->getId()}/"><strong>{$oTalk->getTitle()|escape:'html'}</strong></a>
+					{else}
+						<a href="{router page='talk'}read/{$oTalk->getId()}/">{$oTalk->getTitle()|escape:'html'}</a>
+					{/if}
+					&nbsp;
+					{if $oTalk->getCountComment()}
+						{$oTalk->getCountComment()} {if $oTalkUserAuthor->getCommentCountNew()}+{$oTalkUserAuthor->getCommentCountNew()}{/if}
+					{/if}
 				</td>
-				<td class="cell-date ta-r">{date_format date=$oTalk->getDate()}</td>
+				<td align="center">{date_format date=$oTalk->getDate()}</td>
 			</tr>
 		{/foreach}
 		</tbody>

@@ -1,11 +1,10 @@
 {if $sEvent=='add'}
-	{include file='header.tpl'}
+	{include file='header.tpl' menu='create'}
 {else}
 	{include file='header.tpl'}
 	<h2 class="page-header">{$aLang.topic_link_edit}</h2>
 {/if}
-
-{include file='menu.create.tpl'}
+                               
 {include file='editor.tpl'}
 
 {hook run='add_topic_link_begin'}

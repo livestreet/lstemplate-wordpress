@@ -13,7 +13,17 @@
 .block .bottom { margin-top: 5px; }
 .block .bottom a { margin-left: 15px; font: 12px Georgia, serif; color: #390; }
 
-.block.search .input-submit { color: #333; }
+.block.search .submit { color: #333; background: #f9f9f9;
+    background: -moz-linear-gradient(top, #f9f9f9 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+    background: -webkit-linear-gradient(top, #f9f9f9 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+    background: -o-linear-gradient(top, #f9f9f9 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+    background: -ms-linear-gradient(top, #f9f9f9 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+    background: linear-gradient(top, #f9f9f9 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+     border:1px solid #aaa; border-radius:4px; padding:2px 7px
+}
+.block.search .submit:hover {
+    background:#eee
+}
 .block.search .input-text {
 	-moz-box-shadow: 1px 1px 1px #ddd inset;
 	-webkit-box-shadow: 1px 1px 1px #aaa inset;

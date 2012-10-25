@@ -12,6 +12,9 @@ return array(
 	'talk_favourite_empty' => 'No letters to favorites',
 	'comment_fold' => 'collapse thread',
 	'comment_unfold' => 'expand thread',
+	'search' => 'Find',
+	'search_text' => 'Search',
+	'topic_menu_add_blog' => 'Blog',
 );
 
 ?>
