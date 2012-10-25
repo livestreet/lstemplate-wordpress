@@ -23,6 +23,7 @@
 	padding: 2px;
 	color: #666;
 	font: normal 12px Georgia, serif;
+    width:130px;
 }
 
 .block .cloud { margin-left: 0; }
