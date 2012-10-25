@@ -1,6 +1,6 @@
-<h3 class="profile-page-header">{$aLang.user_menu_profile_favourites}</h3>
+<h2>{$aLang.user_menu_profile_favourites}</h2>
 
-<ul class="nav nav-pills nav-pills-profile">
+<ul class="switcher">
 	<li {if $sMenuSubItemSelect=='topics'}class="active"{/if}>
 		<a href="{$oUserProfile->getUserWebPath()}favourites/topics/">{$aLang.user_menu_profile_favourites_topics}  {if $iCountTopicFavourite} ({$iCountTopicFavourite}) {/if}</a>
 	</li>
@@ -10,5 +10,6 @@
 
 	{hook run='menu_profile_favourite_item' oUserProfile=$oUserProfile}
 </ul>
+<br />
 
 {hook run='menu_profile_favourite' oUserProfile=$oUserProfile}

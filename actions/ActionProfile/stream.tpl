@@ -2,8 +2,8 @@
 {include file='header.tpl'}
 
 {include file='actions/ActionProfile/profile_top.tpl'}
-<h3 class="profile-page-header">{$aLang.user_menu_profile_stream}</h3>
-
+<h2>{$aLang.user_menu_profile_stream}</h2>
+<br />
 
 {if count($aStreamEvents)}
 	<ul class="stream-list" id="stream-list">

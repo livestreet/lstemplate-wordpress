@@ -3,6 +3,7 @@
 /* Title */
 .topic .title { font-size: 24px; font-weight: bold; color: #333; }
 .topic .title i { margin-top:6px; }
+.topic .title i.icon-tag { margin-top:8px; }
 .topic .title a { color: #333; text-decoration: none; }
 .topic .title a.title-blog { color: #333; }
 .topic .title a.title-topic {  }

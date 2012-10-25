@@ -11,7 +11,7 @@
 				<th class="cell-readers">
 					<a href="{$sBlogsRootPage}?order=blog_count_user&order_way={if $sBlogOrder=='blog_count_user'}{$sBlogOrderWayNext}{else}{$sBlogOrderWay}{/if}" {if $sBlogOrder=='blog_count_user'}class="{$sBlogOrderWay}"{/if}>{$aLang.blogs_readers}</a>
 				</th>
-				<th class="cell-rating"><a href="{$sBlogsRootPage}?order=blog_rating&order_way={if $sBlogOrder=='blog_rating'}{$sBlogOrderWayNext}{else}{$sBlogOrderWay}{/if}" {if $sBlogOrder=='blog_rating'}class="{$sBlogOrderWay}"{/if}>{$aLang.blogs_rating}</a></th>
+				<th class="cell-rating align-center"><a href="{$sBlogsRootPage}?order=blog_rating&order_way={if $sBlogOrder=='blog_rating'}{$sBlogOrderWayNext}{else}{$sBlogOrderWay}{/if}" {if $sBlogOrder=='blog_rating'}class="{$sBlogOrderWay}"{/if}>{$aLang.blogs_rating}</a></th>
 			</tr>
 		</thead>
 	{else}
@@ -24,7 +24,7 @@
 				{/if}
 
 				<th class="cell-readers">{$aLang.blogs_readers}</th>
-				<th class="cell-rating">{$aLang.blogs_rating}</th>
+				<th class="cell-rating align-center">{$aLang.blogs_rating}</th>
 			</tr>
 		</thead>
 	{/if}
@@ -53,7 +53,7 @@
 					</td>
 
 					{if $oUserCurrent}
-						<td class="cell-join" align="center">
+						<td class="cell-join">
 							{if $oUserCurrent->getId() != $oBlog->getOwnerId() and $oBlog->getType() == 'open'}
 								<a href="#" onclick="ls.blog.toggleJoin(this, {$oBlog->getId()}); return false;" class="link-dotted">
 									{if $oBlog->getUserIsJoin()}
@@ -68,8 +68,8 @@
 						</td>
 					{/if}
 
-					<td class="cell-readers" align="center" id="blog_user_count_{$oBlog->getId()}">{$oBlog->getCountUser()}</td>
-					<td class="cell-rating" align="center">{$oBlog->getRating()}</td>
+					<td class="cell-readers" id="blog_user_count_{$oBlog->getId()}">{$oBlog->getCountUser()}</td>
+					<td class="cell-rating align-center">{$oBlog->getRating()}</td>
 				</tr>
 			{/foreach}
 		{else}

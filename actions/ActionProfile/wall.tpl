@@ -7,8 +7,8 @@
 
 			
 {include file='actions/ActionProfile/profile_top.tpl'}
-<h3 class="profile-page-header">{$aLang.user_menu_profile_wall}</h3>
-
+<h2>{$aLang.user_menu_profile_wall}</h2>
+<br />
 
 <script type="text/javascript">
 	ls.wall.init({

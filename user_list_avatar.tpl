@@ -2,7 +2,7 @@
 	<ul class="user-list-avatar">
 		{foreach from=$aUsersList item=oUserList}
 			{assign var="oSession" value=$oUserList->getSession()}
-			
+
 			<li>
 				<a href="{$oUserList->getUserWebPath()}"><img src="{$oUserList->getProfileAvatarPath(64)}" alt="avatar" class="avatar" /></a>
 				<a href="{$oUserList->getUserWebPath()}">{$oUserList->getLogin()}</a>
